@@ -2,8 +2,8 @@
     <div class="container">
         <h1 class="text-center">Hi there <span role="img" aria-label="sunglasses">🖖</span>!</h1>
         <p class="text-center lead">
-            Welcome to my collection of all sorts of tool!<br/>
-            I created these tools when I needed something complex or complicated to become much easier, or just for fun.
+            Welcome to my collection of all of tools!<br/>
+            I created these tools when I needed something complex, complicated or just annoying to become much easier.
             I hope these tools will help you as they helped me <span role="img" aria-label="smile">🙂💻</span>
         </p>
         <br/>
