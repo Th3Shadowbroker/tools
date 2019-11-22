@@ -4,7 +4,7 @@
             <h2>Steam Collection Resolver</h2>
             <hr/>
             I originally made this tool to generate the mod-information for my ARK-Server. ARK, as well as some other games,
-            do not accept collection ids. That's where this resolver comes in. Just enter the collection id and see what happens <span role="img" aria-label="cat and pc">🐱‍💻</span><br/>
+            does not accept collection ids. That's where this resolver comes in. Just enter the collection id and see what happens <span role="img" aria-label="cat and pc">🐱‍💻</span><br/>
             <br/>
 
             <form>
