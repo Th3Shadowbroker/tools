@@ -6,7 +6,9 @@
 
     if (!is_null($collectionId)) {
         echo file_get_contents($url);
-        exit(200);
-    } else {
-        exit(500);
+    } 
+    else
+    {
+        echo 'Looks like you dont\'t know what you\'re doing...';
     }
+    
