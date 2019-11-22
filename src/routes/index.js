@@ -3,12 +3,14 @@ import VueRouter from 'vue-router';
 import Home from "../pages/Home";
 import SteamCollectionResolver from "../pages/SteamCollectionResolver";
 import NotFound from "../pages/NotFound";
+import Policies from "../pages/Policies";
 
 Vue.use(VueRouter);
 
 const routes = [
-    {path: '/tools/steam-collection-resolver', component: SteamCollectionResolver},
     {path: '/', component: Home},
+    {path: '/tools/steam-collection-resolver', component: SteamCollectionResolver},
+    {path: '/policies', component: Policies},
     {path: '*', component: NotFound}
 ];
 

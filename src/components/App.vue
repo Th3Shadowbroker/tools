@@ -12,7 +12,11 @@
             <RouterView/>
         </main>
 
-        <Footer>Made with <span role="img" aria-label="heart">💜</span> and <span role="img" aria-label="coffee">☕</span> - <a href="https://th3shadowbroker.org/#imprint" target="_blank">Imprint</a> - <a href="https://th3shadowbroker.org/#data-protection" target="_blank">Privacy policy</a></Footer>
+        <CookieBanner accept="OK" learn-more="Learn more..." learn-more-url="/policies">
+            This site uses cookies to improve the user experience.
+        </CookieBanner>
+
+        <Footer>Made with <span role="img" aria-label="heart">💜</span> and <span role="img" aria-label="coffee">☕</span> - <a href="https://th3shadowbroker.org/#imprint" target="_blank">Imprint</a> - <RouterLink to="/policies">Privacy- and Cookie-Policy</RouterLink></Footer>
 
     </div>
 </template>
@@ -23,8 +27,11 @@
     import Footer from "./Footer";
     import NavigationBarDropdown from "./NavigationBarDropdown";
     import NavigationBarDropdownItem from "./NavigationBarDropdownItem";
+    import CookieBanner from "./CookieBanner";
     export default {
-        components: {NavigationBarDropdownItem, NavigationBarDropdown, Footer, NavigationBarItem, NavigationBar}
+        components: {
+            CookieBanner,
+            NavigationBarDropdownItem, NavigationBarDropdown, Footer, NavigationBarItem, NavigationBar}
     }
 </script>
 
