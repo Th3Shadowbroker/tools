@@ -1,0 +1,20 @@
+{
+  "short_name": "Tools",
+  "name": "Th3Shadowbroker's Tools",
+  "icons": [
+    {
+      "src": "/favicon-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/favicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#ffff",
+  "background_color": "#ffff",
+  "start_url": "/",
+  "display": "standalone"
+}

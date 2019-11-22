@@ -3,7 +3,7 @@
         <h1 class="text-center">Hi there <span role="img" aria-label="sunglasses">🖖</span>!</h1>
         <p class="text-center lead">
             Welcome to my collection of tools!<br/>
-            I created these tools when I wanted something complex, complicated or just annoying to become much easier.
+            I created these tools when I wanted something complex, complicated or annoying to become much easier.
             I hope these tools will help you as they helped me <span role="img" aria-label="smile">🙂💻</span>
         </p>
         <br/>
@@ -20,12 +20,10 @@
         </p>
         <br/>
         <p class="text-center">
-            If you have any questions feel free to contact me on:
-            <ul>
-                <li><a href="https://twitter.com/m4taiori" target="_blank">Twitter</a></li>
-                <li><a href="https://m4taiori.io/#contact" target="_blank">Email</a></li>
-                <li><a href="https://discord.m4taiori.io" target="_blank">Discord</a></li>
-            </ul>
+            If you have any questions feel free to contact me on:<br/>
+            <a href="https://twitter.com/m4taiori" target="_blank">Twitter</a><br/>
+            <a href="https://m4taiori.io/#contact" target="_blank">Email</a><br/>
+            <a href="https://discord.m4taiori.io" target="_blank">Discord</a>
         </p>
 
         <br/>
