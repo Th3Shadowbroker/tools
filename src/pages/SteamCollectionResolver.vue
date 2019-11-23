@@ -48,8 +48,14 @@
                     <th>Author</th>
                     <th>Workshop</th>
                 </tr>
-                <tr class="remove-on-result">
+                <tr class="remove-on-result" v-if="mods.length < 1">
                     <td colspan="4" class="text-center">No collection to resolve!</td>
+                </tr>
+                <tr class="result-entry text-center" v-for="mod of mods" v-bind:key="mod.workshop.id">
+                    <td><img :src="mod.preview" alt="preview"/></td>
+                    <td><a :href="mod.workshop.url" target="_blank">{{mod.name}}</a></td>
+                    <td><a :href="mod.author.profile" target="_blank">{{mod.author.name}}</a></td>
+                    <td><a :href="mod.workshop.url" target="_blank">{{mod.workshop.id}}</a></td>
                 </tr>
             </table>
         </div>
@@ -83,8 +89,6 @@
                 this.csv = '';
                 this.modIdList = '';
                 this.mods = [];
-                document.querySelectorAll('.remove-on-result').forEach( entry => entry.remove() );
-                document.querySelectorAll('.result-entry').forEach( entry => entry.remove() );
 
                 // Fetch data
                 fetch(`/php/steam-collection-resolver.php?collectionId=${collectionId}`)
@@ -115,25 +119,18 @@
                                 const workshopId = workshopUrl.split('=')[1];
 
                                 // Push id to state
-                                this.mods.push(workshopId);
-
-                                // Generate td-items
-                                const modRow = document.createElement('tr');
-                                const modPreviewD = document.createElement('td');
-                                const modNameD = document.createElement('td');
-                                const authorNameD = document.createElement('td');
-                                const workshopIdD = document.createElement('td');
-
-                                // Setup previously generated td-items
-                                modRow.className="text-center result-entry";
-                                modPreviewD.innerHTML = `<img alt="Preview" src="${previewImage}"/>`;
-                                modNameD.innerHTML = `<a href="${workshopUrl}">${modName}</a>`;
-                                authorNameD.innerHTML = `<a href="${authorProfile}" target="_blank">${authorName}</a>`
-                                workshopIdD.innerHTML = `<a href="${workshopUrl}" target="_blank">${workshopId}</a>`;
-
-                                // Just add the stuff
-                                modRow.append(modPreviewD, modNameD, authorNameD, workshopIdD);
-                                document.getElementsByClassName('table')[0].append(modRow);
+                                this.mods.push({
+                                    name: modName,
+                                    author: {
+                                        name: authorName,
+                                        profile: authorProfile
+                                    },
+                                    workshop: {
+                                        id: workshopId,
+                                        url: workshopUrl
+                                    },
+                                    preview: previewImage
+                                });
 
                                 // eslint-disable-next-line no-console
                                 console.log(`Resolved mod: ${modName} (${workshopId})`);
@@ -151,7 +148,7 @@
 
             // Generate csv
             generateCSV (){
-                this.csv = this.mods.join(',');
+                this.csv = this.mods.map(mod => mod.workshop.id).join(',');
             },
 
             // Generate Mod-List for ARK: Survival Evolved
@@ -159,7 +156,7 @@
                 this.modIdList += '[ModInstaller]\n';
                 for (let mod of this.mods)
                 {
-                    this.modIdList += `ModIDS=${mod}\n`;
+                    this.modIdList += `ModIDS=${mod.workshop.id}\n`;
                 }
             }
 

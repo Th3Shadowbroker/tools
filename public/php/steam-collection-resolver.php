@@ -6,9 +6,9 @@
 
     if (!is_null($collectionId)) {
         echo file_get_contents($url);
-    } 
+    }
     else
     {
         echo 'Looks like you dont\'t know what you\'re doing...';
     }
-    
+
