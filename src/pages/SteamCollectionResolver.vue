@@ -32,7 +32,7 @@
                     <br/>
                     <br/>
 
-                    This mod-id list is used by ARK to install mods on startup (Placed in <b>Game.ini</b>):<br/>
+                    If you're using the LinuxGSM, this mod-id list is used by ARK to install mods on startup (Placed in <b>Game.ini</b>):<br/>
                     <textarea id="modIdList" class="form-control" v-bind:value="modIdList" readonly></textarea>
                 </form>
             </CollapseCard>
@@ -51,7 +51,7 @@
                 <tr class="remove-on-result" v-if="mods.length < 1">
                     <td colspan="4" class="text-center">No collection to resolve!</td>
                 </tr>
-                <tr class="result-entry text-center" v-for="mod of mods" v-bind:key="mod.workshop.id">
+                <tr class="text-center" v-for="mod of mods" v-bind:key="mod.workshop.id">
                     <td><img :src="mod.preview" alt="preview"/></td>
                     <td><a :href="mod.workshop.url" target="_blank">{{mod.name}}</a></td>
                     <td><a :href="mod.author.profile" target="_blank">{{mod.author.name}}</a></td>
