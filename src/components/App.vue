@@ -5,6 +5,7 @@
             <NavigationBarItem name="Home" url="/"/>
             <NavigationBarDropdown name="Tools">
                 <NavigationBarDropdownItem name="Steam Collection Resolver" url="/tools/steam-collection-resolver"/>
+                <NavigationBarDropdownItem name="Password Generator" url="/tools/password-generator"/>
             </NavigationBarDropdown>
         </NavigationBar>
 
