@@ -6,23 +6,23 @@
 
                 <div class="form-group text-left">
                     <label for="range">Length</label>
-                    <input id="range" class="form-control-range" type="range" min="5" max="25" v-model="length" value="15">
+                    <input id="range" class="form-control-range" type="range" min="5" max="25" v-model="length" value="15" v-on:change="generatePassword">
                     <span class="current text-muted">{{ length }}</span>
                 </div>
 
                 <div class="text-left">
                     <div class="form-check">
-                        <input id="includeLetters" class="form-check-input" v-model="letters" v-bind:disabled="!numbers && !symbols" type="checkbox">
+                        <input id="includeLetters" class="form-check-input" v-model="letters" v-bind:disabled="!numbers && !symbols" v-on:change="generatePassword" type="checkbox">
                         <label for="includeLetters" class="form-check-label">Use letters</label>
                     </div>
 
                     <div class="form-check">
-                        <input id="includeNumbers" class="form-check-input" v-model="numbers" v-bind:disabled="!letters && !symbols"  type="checkbox">
+                        <input id="includeNumbers" class="form-check-input" v-model="numbers" v-bind:disabled="!letters && !symbols" v-on:change="generatePassword"  type="checkbox">
                         <label for="includeNumbers" class="form-check-label">Use numbers</label>
                     </div>
 
                     <div class="form-check">
-                        <input id="includeSymbols" class="form-check-input" v-model="symbols" v-bind:disabled="!letters && !numbers"  type="checkbox">
+                        <input id="includeSymbols" class="form-check-input" v-model="symbols" v-bind:disabled="!letters && !numbers" v-on:change="generatePassword"  type="checkbox">
                         <label for="includeSymbols" class="form-check-label">Use symbols</label>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
         data() {
             return {
                 password: '',
-                length: 5,
+                length: 15,
                 letters: true,
                 numbers: true,
                 symbols: false
