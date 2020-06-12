@@ -11,12 +11,12 @@
     "core-js": "3.6.5",
     "js-cookie": "2.2.1",
     "vue": "2.6.11",
-    "vue-router": "3.3.2"
+    "vue-router": "3.3.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.4.1",
-    "@vue/cli-plugin-eslint": "4.4.1",
-    "@vue/cli-service": "4.4.1",
+    "@vue/cli-plugin-babel": "4.4.3",
+    "@vue/cli-plugin-eslint": "4.4.3",
+    "@vue/cli-service": "4.4.3",
     "babel-eslint": "10.1.0",
     "eslint": "7.2.0",
     "eslint-plugin-vue": "6.2.2",
